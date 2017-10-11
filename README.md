@@ -1,4 +1,4 @@
-# Arty Z7-20 Petalinux BSP Project
+# Arty Z7-10 Petalinux BSP Project
 
 ## Built for Petalinux 2017.2
 
@@ -6,7 +6,7 @@
 
 ## BSP Features
 
-This petalinux project targets the Vivado block diagram project found here: https://github.com/Digilent/Arty-Z7-20-base-linux.
+This petalinux project targets the Vivado block diagram project found here: https://github.com/Digilent/Arty-Z7-10-base-linux.
 
 The project includes the following features by default:
 
@@ -139,7 +139,7 @@ Run the following commands to build the petalinux project with the default optio
 ```
 petalinux-config --oldconfig
 petalinux-build
-petalinux-package --boot --force --fsbl images/linux/zynq_fsbl.elf --fpga images/linux/Arty_Z7_20_wrapper.bit --u-boot
+petalinux-package --boot --force --fsbl images/linux/zynq_fsbl.elf --fpga images/linux/Arty_Z7_10_wrapper.bit --u-boot
 ```
 
 ### Boot the newly built files from SD: 
@@ -219,10 +219,10 @@ Note the project should be released configured as initramfs for consistency, unl
 #### Warning: image.ub must be less than 100 MB, or github will break and the image likely won't work
 
 ```
-petalinux-package --prebuilt --clean --fpga images/linux/Arty_Z7_20_wrapper.bit -a images/linux/image.ub:images/image.ub 
+petalinux-package --prebuilt --clean --fpga images/linux/Arty_Z7_10_wrapper.bit -a images/linux/image.ub:images/image.ub 
 petalinux-build -x distclean
 petalinux-build -x mrproper
-petalinux-package --bsp --force --output ../releases/Petalinux-Arty-Z7-20-SDSoC-20XX.X-X.bsp -p ./
+petalinux-package --bsp --force --output ../releases/Petalinux-Arty-Z7-10-SDSoC-20XX.X-X.bsp -p ./
 ```
 Remove TMPDIR setting from project-spec/configs/config (this is done automatically for bsp project).
 ```
