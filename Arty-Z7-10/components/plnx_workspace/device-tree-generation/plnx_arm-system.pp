@@ -107,7 +107,7 @@
 };
 
 &flash0 {
- compatible = "s25fl128s";
+ compatible = "micron,m25p80", "s25fl128s", "spi-flash";
 };
 
 &gem0 {

@@ -232,7 +232,7 @@
 			u-boot,dm-pre-reloc;
 
 			flash@0 {
-				compatible = "s25fl128s";
+				compatible = "micron,m25p80", "s25fl128s", "spi-flash";
 				reg = <0x0>;
 				#address-cells = <0x1>;
 				#size-cells = <0x1>;
