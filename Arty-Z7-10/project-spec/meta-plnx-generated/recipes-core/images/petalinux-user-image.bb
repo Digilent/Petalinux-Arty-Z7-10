@@ -23,5 +23,12 @@ IMAGE_INSTALL = "\
 		packagegroup-core-ssh-dropbear \
 		tcf-agent \
 		bridge-utils \
+		gpioutil \
+		kmsdemo \
+		pwmdemo \
+		libgpio \
+		libpwm \
+		libuio \
+		libvrc \
 		"
 EXTRA_USERS_PARAMS = "usermod -P root root;"
